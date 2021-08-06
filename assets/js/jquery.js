@@ -1,20 +1,6 @@
 //accordion script
           $(document).ready(function(){
-            // var acc = document.getElementsByClassName("accordion");
-            // var i;
-            //
-            // for (i = 0; i < acc.length; i++) {
-            //   acc[i].addEventListener("click", function() {
-            //     $(this).toggleClass("accordion-active");
-            //     // this.classList.toggle("accordion-active");
-            //     var panel = this.nextElementSibling;
-            //     if (panel.style.maxHeight) {
-            //       panel.style.maxHeight = null;
-            //     } else {
-            //       panel.style.maxHeight = panel.scrollHeight + "px";
-            //     }
-            //   });
-            // }
+
 
             $(".accordion").click(function() {
               console.log("clicked");
@@ -39,4 +25,20 @@
                 panel3.classList.add("panel-max");
               }
             });
+
+            $(".work-type").click(function() {
+              $(".work-type").removeClass("work-selected");
+              $(this).addClass("work-selected");
+            });
+        });
+
+
+        $('.togather-checkbox-section').click(function() {
+          $('.togather-checkbox-section .checkbox-inner').toggleClass('checked');
+          if($('#togather-checkbox').prop('checked')){
+            $('#togather-checkbox').prop('checked', false);
+          }
+          else {
+            $('#togather-checkbox').prop('checked', true);
+          }
         });
