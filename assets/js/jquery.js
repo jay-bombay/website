@@ -42,3 +42,20 @@
             $('#togather-checkbox').prop('checked', true);
           }
         });
+
+        $(function() {
+  var loc = window.location.href; // returns the full URL
+  if(/blog-detail/.test(loc) || /work-detail/.test(loc)) {
+    $('.header').addClass('font-blue');
+  }
+});
+
+$('.navbar-toggler').click(function() {
+  $('.mobile-nav').addClass('open');
+  $('body').addClass('no-scroll');
+});
+
+$('.mobile-nav-close').click(function() {
+  $('.mobile-nav').removeClass('open');
+  $('body').removeClass('no-scroll');
+});
