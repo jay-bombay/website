@@ -59,3 +59,9 @@ $('.mobile-nav-close').click(function() {
   $('.mobile-nav').removeClass('open');
   $('body').removeClass('no-scroll');
 });
+
+
+$('.mobile-nav-mid .accordion').click(function() {
+  $(this).find('.symbol-plus').toggleClass('minus-sign');
+  $(this).find('.symbol-plus span').toggleClass('no-disp');
+});
